@@ -10,14 +10,49 @@
   line-height: 0;
   transform: rotate(180deg);
 }
+.modals {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width:100%;
+  height: 100%;
+  padding-top: 10rem;
+  background: rgba(0, 0, 0, 0.6);
 
+
+}
+
+.modalMain{
+  position:fixed;
+  padding-top: 5rem;
+  padding-bottom: 2rem;
+  background: white;
+  width: 80%;
+  height: auto;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+}
 .curves svg {
   position: relative;
   display: block;
   width: calc(100% + 1.3px);
   height: 129px;
 }
-
+.iframe  {
+  position: relative;
+  padding-bottom: 65.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+  }
+  .iframe iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  }
 .curves .shapefill {
   fill: #FFFFFF;
 }
