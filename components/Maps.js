@@ -1,12 +1,11 @@
 import Styles from '../styles/Home.module.css'
-import {BsGrid3X3GapFill} from 'react-icons/bs'
 const Maps = () => {
   return (
-    <div>
+    <div className="max-w-3xl mx-auto">
       <div className={Styles.iframe}>
         <iframe
-          width="425"
-          height="350"
+          width="700"
+          height="150"
           frameBorder="0"
           scrolling="no"
           marginHeight="0"
@@ -15,9 +14,6 @@ const Maps = () => {
           ></iframe>
         <br />
       </div>
-      <button className="mt-10 px-10 text-white bg-gradient-to-r shadow-md shadow-teal-500/30 hover:shadow-teal-500/90 from-teal-900 to-teal-900 p-3 text-xl rounded">
-      <BsGrid3X3GapFill /> Ver en maps
-          </button>
     </div>
   );
 };
