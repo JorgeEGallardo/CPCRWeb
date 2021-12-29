@@ -1,9 +1,12 @@
 import LeadText from '@material-tailwind/react/LeadText';
-const Jumbo = () => {
+const Jumbo = ({size}) => {
+    const height = size ? size : 'h-screen'
+    const hidden = size ? ' h-16' : 'h-full'
+    const invisible = size ? ' invisible' : ' '
     return (
-    <div className="relative pt-16 pb-32 flex content-center items-center justify-center h-screen">
-        <div className="bg-landing-background bg-cover bg-center absolute top-0 w-full h-full" />
-            <div className="container max-w-8xl relative mx-auto">
+    <div className={"relative pt-16 pb-32 flex content-center items-center justify-center " + height}>
+        <div className={"bg-landing-background bg-cover bg-center absolute top-0 w-full " + hidden}/>
+            <div className={"container max-w-8xl relative mx-auto " + invisible}>
                 <div className="items-center flex flex-wrap">
                     <div className="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
                     <h1 className="font-serif text-white text-5xl font-bold leading-normal mb-4">Por un capital en manos del pueblo.</h1>
