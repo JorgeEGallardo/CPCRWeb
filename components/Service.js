@@ -15,9 +15,9 @@ const Service = ({text, title, link, children}) => {
           {text}
         </p>
         <Link href={link}>
-        <button className="bg-stone-50 p-2 font-bold rounded" type="button">
+        <a className="bg-stone-50 p-2 font-bold rounded" type="button">
          <span className="text-red-800 text-2xl"> + </span> Mas informacion
-        </button>
+        </a>
         </Link>
       </div>
       </>
