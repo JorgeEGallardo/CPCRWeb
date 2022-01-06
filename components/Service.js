@@ -8,7 +8,7 @@ const Service = ({text, title, link, children}) => {
             {children}
           </span>
         </div>
-        <h1 className="text-gray-900 text-xl font-serif font-bold leading-normal mt-0 mb-2">
+        <h1 className="text-indigo-900 text-xl font-serif font-bold leading-normal mt-0 mb-2">
           {title}
         </h1>
         <p className="text-blue-gray-700 text-base font-light leading-relaxed mt-0 mb-4">

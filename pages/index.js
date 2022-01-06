@@ -3,10 +3,9 @@ import H1 from "../components/H1";
 import Text from "../components/Text";
 import Jumbo from "../components/Jumbo";
 import Navbar from "../components/Navbar";
-import styles from "../styles/Home.module.css";
 import Card from "../components/Card";
 import Service from "../components/Service";
-import Certificate  from '../public/certificate.svg'
+import Certificate from "../public/certificate.svg";
 import {
   FaPiggyBank,
   FaMoneyCheckAlt,
@@ -15,6 +14,7 @@ import {
 } from "react-icons/fa";
 import Image from "next/image";
 import Footer from "../components/Footer";
+import TextImage from "../components/TextImage";
 export default function Home() {
   return (
     <div>
@@ -117,16 +117,22 @@ export default function Home() {
         </div>
       </section>
       <section>
-        <div className="w-full mb-20 block md:flex items-center">
-          <div className="md:w-6/12 w-full">
-             <H1>¿Por qué confiar en nosotros?</H1>
-            <Text><p className="text-xl mt-10 ml-3 md:ml-20 text-left text-gray-600 font-medium">Somos una entidad financiera supervisada y autorizada por la CNBV (Comisión Nacional Bancaria y Valores) y FOCOOP (Fideicomiso Fondo de Supervisión Auxiliar de Sociedades Cooperativas de Ahorro y Préstamo y de Protección a sus Ahorradores. Esto significa que tu dinero estará seguro con nosotros.</p></Text>
-              <Text><p className="text-xl mt-10 ml-3 md:ml-20 text-left text-gray-600 font-medium"> Ademas contamos con multiples seguros que protegen tu ahorro, tu patrimonio y sobretodo a tu familia. Por si fuera poco, contamos con  tasas realmente bajas con plazos flexibles y accessibles para que puedas elegir lo que mas te convenga en este momento.</p></Text>
-          </div>
-          <div className="md:w-4/12 w-6/12 mx-auto ">
-          <Image height="500" alt="certificado supervisada CNBV CPCR CAJA POPULAR CRISTO REY CHECK" src={Certificate} />
-          </div>
-        </div>
+        <TextImage title="¿Por qué confiar en nosotros?" image={Certificate} alt="certificado supervisada CNBV CPCR CAJA POPULAR CRISTO REY CHECK">
+          {" "}
+          <p className="text-xl mt-10 ml-3 md:ml-20 text-left text-gray-600 font-medium">
+            Somos una entidad financiera supervisada y autorizada por la CNBV
+            (Comisión Nacional Bancaria y Valores) y FOCOOP (Fideicomiso Fondo
+            de Supervisión Auxiliar de Sociedades Cooperativas de Ahorro y
+            Préstamo y de Protección a sus Ahorradores). Esto significa que tu
+            dinero estará seguro con nosotros.
+          </p>
+          <p className="text-xl mt-10 ml-3 md:ml-20 text-left text-gray-600 font-medium">
+            Ademas contamos con multiples seguros que protegen tu ahorro, tu
+            patrimonio y sobretodo a tu familia. Por si fuera poco, contamos con
+            tasas realmente bajas con plazos flexibles y accessibles para que
+            puedas elegir lo que mas te convenga en este momento.
+          </p>
+        </TextImage>
       </section>
       <Footer></Footer>
     </div>

@@ -34,7 +34,7 @@ const Card = (props) => {
 
         <button  onClick={() => {
           setShow(true);
-        }} className="bg-stone-50 p-2 font-bold rounded" type="button">
+        }} className="bg-stone-50 p-2 text-indigo-900 font-bold rounded" type="button">
           Contactanos
         </button>
       </div>
