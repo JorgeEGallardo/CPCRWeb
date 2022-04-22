@@ -1,136 +1,120 @@
-const credits =  [
+const credits = [
     {
-      Crédito: "Préstamo Automático",
-      "Plazo Mínimo": "Un Mes",
-      "Plazo Máximo": "36 meses",
-      "Tasa Ordinaria": "12% anual (1% mensual)",
-      "Tasa Moratoria": "24% anual (2% mensual)",
-      Garantía: "100% Garantía Líquida",
-      Condiciones: "Capacidad de Pago y Buen Historial en Buró de Crédito",
+        Crédito: "Automático",
+        "Plazo máximo": "Hasta 96 meses",
+        "Tasa ordinaria": "1% mensual (12% anual) más IVA",
+        "Tasa moratoria": "2% mensual (24% anual) mas IVA",
+        Garantía: "100% de garantía liquida y quirografaria",
+        "Tiempo de respuesta": "Inmediata",
+        Condiciones: "Presentar reporte de Buró, según sea el caso."
     },
     {
-      Crédito: "Préstamo Automático 30-50",
-      "Plazo Mínimo": "Un Mes",
-      "Plazo Máximo": "36 meses",
-      "Tasa Ordinaria": "15.60% anual (1.3% mensual)",
-      "Tasa Moratoria": "24% anual (2% mensual)",
-      Garantía:
-        "100% Garantía Líquida, de 1 a 2 Avales, depende del monto a solicitar.",
-      Condiciones: "Capacidad de Pago y Buen Historial en Buró de Crédito",
+        Crédito: "Automático 30- 50",
+        "Plazo máximo": "Hasta 96 meses",
+        "Tasa ordinaria": "1.3% mensual\n(15.60% anual) mas IVA",
+        "Tasa moratoria": "2% mensual (24% anual) mas IVA",
+        Garantía: "100% garantía liquida, 1 a 2 avales según el monto a solicitar",
+        "Tiempo de respuesta": "Inmediata",
+        Condiciones: "Presentar reporte de Buró.\nEn caso de presentar avales no socios se realizará la visita domiciliaria antes de su entrega."
     },
     {
-      Crédito: "Préstamo Ordinario Socio Cumplido",
-      "Plazo Mínimo": "Un Mes",
-      "Plazo Máximo": "36 meses – 60 meses",
-      "Tasa Ordinaria": "12% anual (1% mensual)",
-      "Tasa Moratoria": "24% anual (2% mensual)",
-      Garantía: "100% Garantía Líquida",
-      Condiciones: "Capacidad de Pago y Buen Historial en Buró de Crédito",
+        Crédito: "Ordinario socio cumplido",
+        "Plazo máximo": "Hasta 96 meses",
+        "Tasa ordinaria": "1% mensual (12% anual) más IVA",
+        "Tasa moratoria": "2% mensual (24% anual) mas IVA",
+        Garantía: "100% de garantía liquida y quirografaria",
+        "Tiempo de respuesta": "Inmediata",
+        Condiciones: "Presentar reporte de Buró, según sea el caso."
     },
     {
-      Crédito: "Préstamo Ordinario Socio Cumplido 30-50",
-      "Plazo Mínimo": "Un Mes",
-      "Plazo Máximo": "36 meses",
-      "Tasa Ordinaria": "15.60% anual (1.3% mensual)",
-      "Tasa Moratoria": "24% anual (2% mensual)",
-      Garantía: "100% Garantía Líquida, 1 a 2 Avales",
-      Condiciones:
-        "Capacidad de Pago y Se otorga solo a Socios con buen historial crediticio",
+        Crédito: "Ordinario socio cumplido 30-50",
+        "Plazo máximo": "Hasta 96 meses",
+        "Tasa ordinaria": "1.3% mensual\n(15.60% anual) mas IVA",
+        "Tasa moratoria": "2% mensual (24% anual) mas IVA",
+        Garantía: "100% garantía liquida, 1 a 2 avales según el monto a solicitar",
+        "Tiempo de respuesta": "Inmediata",
+        Condiciones: "Presentar reporte de Buró. En caso de presentar avales no socios se realizará la visita domiciliaria y se pasara a revisión al Comite de Crédito."
     },
     {
-      Crédito: "Préstamo Ordinario Doble",
-      "Plazo Mínimo": "Un Mes",
-      "Plazo Máximo": "36 meses -60 meses",
-      "Tasa Ordinaria": "18% anual (1.5% mensual)",
-      "Tasa Moratoria": "24% anual (2% mensual)",
-      Garantía:
-        "Hasta $10,000.00 solo con un aval; de $10,001.00 hasta $70,000.00 solo 2 avales solventes; de $70,001.00 hasta $150,000.00 2 avales y garantía prendaria o escritura de un bien inmueble en depósito. De $150,001.00 en adelante 2 avales y garantía hipotecaria protocolizada.",
-      Condiciones:
-        "Capacidad de Pago y Se otorga solo a Socios con buen historial crediticio",
+        Crédito: "Emergencia",
+        "Plazo máximo": "Hasta 6 meses",
+        "Tasa ordinaria": "1% mensual (12% anual) más IVA",
+        "Tasa moratoria": "2% mensual (24% anual) mas IVA",
+        Garantía: "Si no garantiza con el monto de sus haberes, lo garantizará con un aval y/o su buen historial crediticio.",
+        "Tiempo de respuesta": "inmediata",
+        Condiciones: "Presentar reporte de Buró. En caso de presentar avales no socios se realizará la visita domiciliaria."
     },
     {
-      Crédito: "Préstamo Ordinario Triple",
-      "Plazo Mínimo": "Un Mes",
-      "Plazo Máximo": "36 meses – 60 meses",
-      "Tasa Ordinaria": "20.40% anual (1.7% mensual)",
-      "Tasa Moratoria": "24% anual (2% mensual)",
-      Garantía:
-        "Hasta $10,000.00 solo con un aval; de $10,001.00 hasta $70,000.00 solo 2 avales solventes; de $70,001.00 hasta $150,000.00 2 avales y garantía prendaria o escritura de un bien inmueble en depósito. De $150,001.00 en adelante 2 avales y garantía hipotecaria protocolizada.",
-      Condiciones:
-        "Capacidad de Pago y Se otorga solo a Socios con buen historial crediticio",
+        Crédito: "Ordinario doble",
+        "Plazo máximo": "Hasta 96 meses",
+        "Tasa ordinaria": "1.5% mensual\n(18% anual)",
+        "Tasa moratoria": "2% mensual (24% anual) mas IVA",
+        Garantía: "100% de garantía liquida 1 a 2 avales y/o garantía prendaria o hipotecaria,  según monto a solicitar",
+        "Tiempo de respuesta": "Si el capital en riesgo es hasta por $ 20,000.00 será de entrega inmediata, 1 aval y pasa a revisión por el comité de crédito.\nSi el capital en riesgo es mayor a $ 20,000.00 y hasta $70,000.00 2 avales. Si el capital en riesgo es mayor de $70,000.00 a $ 150,000.00, 2 avales y garantía prendaria. Si el capital en riesgo es mayor de $ 150,000.00 2 avales y garantía hipotecaria protocolizada.",
+        Condiciones: "Si el capital en riesgo es hasta por $ 20,000.00 será de entrega inmediata, 1 aval y pasa a revisión por el comité de crédito.\nSi el capital en riesgo es mayor a $ 20,000.00 y hasta $70,000.00 2 avales. Si el capital en riesgo es mayor de $70,000.00 a $ 150,000.00, 2 avales y garantía prendaria. Si el capital en riesgo es mayor de $ 150,000.00 2 avales y garantía hipotecaria protocolizada."
     },
     {
-      Crédito: "Préstamo Emergencia",
-      "Plazo Mínimo": "Un Mes",
-      "Plazo Máximo": "6 meses",
-      "Tasa Ordinaria": "12% anual (1% mensual)",
-      "Tasa Moratoria": "24% anual (2% mensual)",
-      Garantía: "100% Garantía Líquida, 1 Aval",
-      Condiciones:
-        "Utilizable solamente en verdaderas emergencias, tales como: gastos médicos, gastos legales, comprobables, siendo revisado y evaluado por el Departamente de Crédito.",
+        Crédito: "Ordinario triple",
+        "Plazo máximo": "Hasta 96 meses",
+        "Tasa ordinaria": "1.7% mensual\n(20.40% anual)",
+        "Tasa moratoria": "2% mensual (24% anual) mas IVA",
+        Garantía: "100% de garantía liquida 1 a 2 avales y/o garantía prendaria o hipotecaria, según monto a solicitar",
+        "Tiempo de respuesta": "inmediata y entre 8 y 10 días según el monto del crédito",
+        Condiciones: "Si el capital en riesgo es hasta por $ 20,000.00 será de entrega inmediata, un aval y pasa a revisión por el comité de crédito.\nSi el capital en riesgo es mayor a $ 20,000.00 y hasta $70,000.00 2 avales. si el capital en riesgo es mayor de $70,000.00 hasta $ 150,000.00 2 avales y garantía prendaria. Si el capital en riesgo es mayor de $ 150,000.00 2 avales y garantía hipotecaria protocolizada."
     },
     {
-      Crédito: "Préstamo Comercial",
-      "Plazo Mínimo": "Un Mes",
-      "Plazo Máximo": "36 meses – 60 meses",
-      "Tasa Ordinaria": "12% anual (1% mensual)",
-      "Tasa Moratoria": "24% anual (2% mensual)",
-      Garantía:
-        "20% Garantía Líquida con 2 avales, de $50,001.00 hasta $120,000.00 con 2 avales y Garantía Prendaria, de $120,001.00 en adelante con 2 avales y Garantía Hipotecaria.",
-      Condiciones:
-        "Deberá demostrar con su libreta un buen historial y que si antes ha tenido un préstamo similar hayan sido sus pagos puntuales. Deberá documentarse de acuerdo a los requisitos para el mismo poderlo tratar como comercial.",
+        Crédito: "Comercial",
+        "Plazo máximo": "Hasta 96 meses",
+        "Tasa ordinaria": "1% mensual (12% anual)",
+        "Tasa moratoria": "2% mensual (24% anual)",
+        Garantía: "20% garantía liquida,2 avales y/o garantía prendaria e hipotecaria, según el monto a solicitar",
+        "Tiempo de respuesta": "Entre 8 y 10 días",
+        Condiciones: "Presentar reporte de Buró, según sea el caso. No se otorgará reestructura o renovación."
     },
     {
-      Crédito: "Préstamo Promocional",
-      "Plazo Mínimo": "Un Mes",
-      "Plazo Máximo": "18 meses",
-      "Tasa Ordinaria": "13.20% anual (1.1% mensual)",
-      "Tasa Moratoria": "24% anual (2% mensual)",
-      Garantía: "30% Garantía Líquida, 1 Aval.",
-      Condiciones:
-        "Deberá demostrar con su libreta un buen historial y que si antes ha tenido un préstamo similar hayan sido sus pagos puntuales. Récord de préstamos, no debe haber morosidad, ni mucho menos vencido algún crédito.",
+        Crédito: "Promoción",
+        "Plazo máximo": "Hasta 96 meses",
+        "Tasa ordinaria": "1.1% mensual\n(13.20% anual) mas IVA",
+        "Tasa moratoria": "2% mensual (24% anual) mas IVA",
+        Garantía: "10% garantía liquida, 2 avales y/o garantía prendaria e hipotecaria, según monto a solicitar",
+        "Tiempo de respuesta": "Inmediato y entre 8 a 10 días",
+        Condiciones: "Presentar reporte de Buró.\nHasta un monto por 20,000.00, entrega inmediata 1 aval y pasa a revisión por el comité de crédito,  si es mayor  de$ 20,000 y hasta $ 70,000.00 2\navales, mayores de $ 70,000.00 a $ 150,000.00 2 avales y garantía prendaria, mayores a\n$150,000.00 2 avales y garantía hipotecaria protocolizada.\nNo se otorgará reestructura."
     },
     {
-      Crédito: "Préstamo Promocional Vivienda",
-      "Plazo Mínimo": "Un Mes",
-      "Plazo Máximo": "36 meses – 60 meses",
-      "Tasa Ordinaria": "13.20% anual (1.1% mensual)",
-      "Tasa Moratoria": "24% anual (2% mensual)",
-      Garantía:
-        "20% Garantía Líquida con 2 avales, de $50,001.00 hasta $120,000.00 con 2 avales y Garantía Prendaria, de $120,001.00 en adelante con 2 avales y Garantía Hipotecaria.",
-      Condiciones:
-        "Deberá demostrar con su libreta un buen historial y que si antes ha tenido un préstamo similar hayan sido sus pagos puntuales. Récord de préstamos, no debe haber morosidad, ni mucho menos vencido algún crédito.",
+        Crédito: "Calentador solar",
+        "Plazo máximo": "Hasta 18 meses",
+        "Tasa ordinaria": "No aplica",
+        "Tasa moratoria": "2% mensual (24% anual)",
+        Garantía: "10% garantía liquida y 1aval",
+        "Tiempo de respuesta": "Entre 8 y 10 días",
+        Condiciones: "Presentar reporte de Buró y revisado por el Comite de Crédito."
     },
     {
-      Crédito: "Préstamo Promoción Vehiculo",
-      "Plazo Mínimo": "Un Mes",
-      "Plazo Máximo": "36 meses – 60 meses",
-      "Tasa Ordinaria": "13.20% anual (1.1% mensual)",
-      "Tasa Moratoria": "24% anual (2% mensual)",
-      Garantía:
-        "20% Garantía Líquida, 2 Avales o más si el Comité lo considera necesario la Garantía prendaria, factura del automóvil queda a favor de la Caja hasta su liquidación.",
-      Condiciones:
-        "Deberá demostrar con su libreta un buen historial y que si antes ha tenido un préstamo similar hayan sido sus pagos puntuales. Récord de préstamos, no debe haber morosidad, ni mucho menos vencido algún crédito.",
+        Crédito: "Agricultura",
+        "Plazo máximo": "Hasta 12 meses",
+        "Tasa ordinaria": "1.9% mensual\n(22.80% anual)",
+        "Tasa moratoria": "2% mensual (24% anual)",
+        Garantía: "10% garantía liquida y 2 avales, garantía prendaria o hipotecaria protocolizada",
+        "Tiempo de respuesta": "Entre 8 y 10 días",
+        Condiciones: "Presentar reporte de Buró y declaratoria de la finalidad del crédito. Garantía prendaria mayores de $70,000.00 hasta $90,000.00 o hipotecaria protocolizada mayores de $90,000.00"
     },
     {
-      Crédito: "Préstamo Promoción Calentador Solar",
-      "Plazo Mínimo": "Un Mes",
-      "Plazo Máximo": "18 meses",
-      "Tasa Ordinaria": "NO APLICA",
-      "Tasa Moratoria": "24% anual (2% mensual), en caso de Incumplimiento",
-      Garantía: "10% Garantía Líquida, 1 Avales, factura de calentador.",
-      Condiciones:
-        "Deberá demostrar con su libreta un buen historial y que si antes ha tenido un préstamo similar hayan sido sus pagos puntuales. Récord de préstamos, no debe haber morosidad, ni mucho menos vencido algún crédito.",
+        Crédito: "Ocasional",
+        "Plazo máximo": "Hasta 96 meses",
+        "Tasa ordinaria": "2.5% mensual\n(30% anual) más IVA",
+        "Tasa moratoria": "2% mensual (24% anual) mas IVA",
+        Garantía: "10% garantía liquida y 1 a 2 avales, garantía prendaria o hipotecaria, según el monto a solicitar.",
+        "Tiempo de respuesta": "inmediata y entre 8 y 10 días según el monto del crédito",
+        Condiciones: "Presentar reporte de Buró.\nHasta un monto por 20,000.00 entrega inmediata, 1 aval y pasa a revisión por el comité de crédito. Mayores de $ 20,000 hasta $ 70,000.00, 2 avales. Mayores de $ 70,000.00 a $ 150,000.00 2 avales y garantía prendaria.\nMayores a $150,000.00 2 avales y garantía hipotecaria protocolizada.\nNo se otorgará reestructura."
     },
     {
-      Crédito: "Préstamo Crédito Ocasional",
-      "Plazo Mínimo": "Un Mes",
-      "Plazo Máximo": "36 meses-60 meses",
-      "Tasa Ordinaria": "30% anual (2.5% mensual)",
-      "Tasa Moratoria": "24% anual (2% mensual), en caso de Incumplimiento",
-      Garantía:
-        "10% Garantía Líquida, Montos hasta $7,000.00 con un aval solvente, de 7,001 en adelante de 1 a 2 avales solventes y/o Garantía Hipotecaria, Prendaria. De $120,001 en Adelante de 1 a 2 avales solvente y Garantía Hipotecaria.",
-      Condiciones: "Capacidad de pago y con buen historial crediticio.",
-    },
-  ]
+        Crédito: "Nómina",
+        "Plazo máximo": "Hasta 36 meses",
+        "Tasa ordinaria": "1% mensual (12% anual) mas IVA",
+        "Tasa moratoria": "2% mensual (24% anual) mas IVA",
+        Garantía: "10% garantía liquida.",
+        "Tiempo de respuesta": "inmediata",
+        Condiciones: "Presentar reporte de Buró y revisión por el Comite de Crédito."
+    }
+]
 export default credits
