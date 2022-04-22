@@ -1,8 +1,8 @@
-import Image from "next/image"
 import H1 from "./H1"
 
 
 const TextImage = (props) => {
+    console.log(props.image)
     return (
         <>
          <div className="w-full mb-20 block md:flex items-center">
@@ -13,7 +13,7 @@ const TextImage = (props) => {
                 </div>
             </div>
           <div className="md:w-4/12 w-8/12 mx-auto mt-20 md:mt-0">
-          <Image height="500" alt={props.alt} src={props.image} />
+          <img height="500" alt={props.alt} src={"/"+props.image} />
           </div>
         </div>
         </>

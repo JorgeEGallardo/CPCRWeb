@@ -4,28 +4,27 @@ import { IconContext } from "react-icons";
 const Taxes = (props) => {
   const [inputText, setInputText] = useState(0);
   const calculate = (val) => {
-      console.log(props.op(2))
     return props?.op(val) ?? 0
   }
   const handleChangeNumber = (e) => {
     setInputText(Math.round(calculate(e.target.value) * 100) / 100);
-  };
+  }
   return (
-    <div className="mx-auto w-full">
+    <div className="mx-auto mt-20 w-full">
       <div className="mb-4">
-        <h2
+       {/* <h2
           className="block text-2xl w-full text-center text-indigo-600 mt-6 font-bold mb-8 "
           htmlFor="aaa"
         >
-          Cálcula cuanto tendrás en un año:
-        </h2>
+          Cálcula cuanto tendrás en {props.time}:
+        </h2>/** */}
         <div className="w-full md:flex md:max-w-5xl mx-auto">
             <div div className="w-full md:mr-5">
         <label
           className="block text-gray-700 text-lg font-bold mb-2"
           htmlFor="username"
         >
-          Cuando ahorre
+          {props.type}
         </label>
         
         <input
@@ -40,7 +39,7 @@ const Taxes = (props) => {
           className="block text-gray-700 text-lg font-bold mb-2"
           htmlFor="username"
         >
-          Despues de un año tendré
+          Despues de {props.time} tendré
         </label>
         <input
           type="text"

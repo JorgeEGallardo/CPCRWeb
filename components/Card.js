@@ -47,7 +47,7 @@ const Card = (props) => {
           <MdMarkEmailRead className="inline text-red-600 text-2xl" />
           contacto@cajapopularcristorey.com.mx
         </p>
-        <Maps></Maps>
+        <Maps src={props.src}></Maps>
       </Modal>
     </>
   );
