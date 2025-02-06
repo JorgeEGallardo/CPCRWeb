@@ -24,6 +24,9 @@ const Navbar = () => {
             <NLink href="//#servicios" name="Servicios"></NLink>
             <NLink href="/" name="Sobre nosotros"></NLink>
             <NLink href="//#contacto" name="Contacto"></NLink>
+            <NLink href="https://redeco.gmstore.com.mx/" name="Portal REDECO"></NLink>
+            <NLink href="https://redeco.gmstore.com.mx/pdf/AcudeRedeco2025.pdf" name="Aviso REDECO"></NLink>
+
           </div>
         </div>
       </nav>
